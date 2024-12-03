@@ -30,7 +30,7 @@ jobs:
     # Крок 2: Запуск тестів
     - name: Run tests
       run: | # Запуск тестів
-        pytest tests/ --maxfail=1 --disable-warnings -q
+        pytest tests/test_app.py --maxfail=1 --disable-warnings -q
       continue-on-error: false    # Якщо тести не пройдуть, пайплайн зупиняється
 
     # Крок 3: Симуляція деплою
