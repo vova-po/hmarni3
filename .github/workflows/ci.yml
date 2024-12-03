@@ -23,14 +23,14 @@ jobs:
         python-version: '3.9'    # Вказуємо версію Python
 
     - name: Install dependencies
-      run: |
+      run: | # Встановлюємо залежності
         python -m pip install --upgrade pip
-        pip install -r requirements.txt    # Встановлюємо залежності
+        pip install -r requirements.txt
 
     # Крок 2: Запуск тестів
     - name: Run tests
-      run: |
-        pytest --maxfail=1 --disable-warnings -q    # Запуск тестів
+      run: | # Запуск тестів
+        pytest --maxfail=1 --disable-warnings -q
       continue-on-error: false    # Якщо тести не пройдуть, пайплайн зупиняється
 
     # Крок 3: Симуляція деплою
